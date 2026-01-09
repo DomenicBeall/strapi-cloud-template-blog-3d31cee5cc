@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_subtitles",
+  "info": {
+    "displayName": "Subtitle"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30,
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -16,8 +16,7 @@
       "type": "string"
     },
     "description": {
-      "type": "text",
-      "maxLength": 80
+      "type": "text"
     },
     "slug": {
       "type": "uid",
@@ -45,8 +44,13 @@
         "shared.media",
         "shared.quote",
         "shared.rich-text",
-        "shared.slider"
+        "shared.subtitle"
       ]
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }

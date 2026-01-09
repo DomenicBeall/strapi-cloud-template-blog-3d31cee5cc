@@ -50,15 +50,18 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedSlider extends Struct.ComponentSchema {
-  collectionName: 'components_shared_sliders';
+export interface SharedSubtitle extends Struct.ComponentSchema {
+  collectionName: 'components_shared_subtitles';
   info: {
-    description: '';
-    displayName: 'Slider';
-    icon: 'address-book';
+    displayName: 'Subtitle';
   };
   attributes: {
-    files: Schema.Attribute.Media<'images', true>;
+    text: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 30;
+        minLength: 1;
+      }>;
   };
 }
 
@@ -69,7 +72,7 @@ declare module '@strapi/strapi' {
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
-      'shared.slider': SharedSlider;
+      'shared.subtitle': SharedSubtitle;
     }
   }
 }
